@@ -1,0 +1,49 @@
+{
+  "name": "exel",
+  "version": "1.0.0",
+  "description": "excel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amosov00/excel.git"
+  },
+  "author": "amosov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amosov00/excel/issues"
+  },
+  "homepage": "https://github.com/amosov00/excel#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-loader": "^4.0.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "normalize.css": "^8.0.1"
+  },
+  "browserslist": [
+    "> 0.25%",
+    "not dead"
+  ]
+}

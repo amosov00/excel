@@ -7,6 +7,8 @@
   right: 0;
   top: $header-height + $toolbar-height + $formula-height;
   padding-bottom: 2px;
+  overflow-x: scroll;
+  overflow-y: auto;
   .row {
     display: flex;
     flex-direction: row;
@@ -14,6 +16,7 @@
     height: $row-height;
   }
   .row-info {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +31,7 @@
   }
 
   .column {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,10 +55,42 @@
     color: #111;
     white-space: nowrap;
     outline: none;
+    overflow: hidden;
+    &:focus {
+      overflow: visible;
+    }
     &.selected {
       border: none;
       outline: 2px solid #3c74ff;
       z-index: 2;
+    }
+  }
+
+  .col-resize {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 4px;
+    background: #3c74ff;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background-color: #3c74ff;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      cursor: row-resize;
     }
   }
 }
